@@ -36,7 +36,7 @@ static void reverseArray(int n,int arr[])
     {
         System.out.print(arr[i]+ " ");
     }
-        
+     sc.close();   
     }
     
 }

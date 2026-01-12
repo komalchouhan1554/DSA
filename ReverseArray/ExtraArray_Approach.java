@@ -30,6 +30,7 @@ public class ExtraArray_Approach {
         {
             System.out.print( A[i]+ " ");
         }
+        sc.close();
     }
     
 }

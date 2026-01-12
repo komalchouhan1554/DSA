@@ -1,17 +1,14 @@
-package ReverseArray;
-
 import java.util.Scanner;
 
-public class recursive_Approach {
-static void reverseRec(int[] arr, int left, int right) {
-    if (left >= right) return;
-    int temp = arr[left];
-    arr[left] = arr[right];
-    arr[right] = temp;
-    reverseRec(arr, left + 1, right - 1);
-}
-
-    
+public class reverseLtoR {
+    static void reverseLR(int arr[],int left,int right)
+    {
+        if(left>=right) return;
+        int temp=arr[left];
+        arr[left]=arr[right];
+        arr[right]=temp;
+        reverseLR(arr, left+1, right-1);
+    }
      public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
@@ -20,13 +17,14 @@ static void reverseRec(int[] arr, int left, int right) {
         {
             arr[i]=sc.nextInt();
         }
-            int left=0;
-            int right=arr.length-1;
-           reverseRec(arr,left,right);
+            int left=1;
+            int right=n-2;
+           reverseLR(arr,left,right);
         for(int i=0;i<n;i++)
         {
             System.out.print( arr[i]+ " ");
         }
         sc.close();
     }
+    
 }

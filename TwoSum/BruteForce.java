@@ -1,0 +1,41 @@
+package TwoSum;
+
+import java.util.Scanner;
+
+public class BruteForce {
+    static int twosum(int arr[], int target, int n) {
+        for (int i = 0; i < n; i++)
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] + arr[j] == target) {
+                    System.out.println(i + " " + j);
+                    return i;
+                }
+            }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the value of n:");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        System.out.println("Enter elements of array:");
+
+        for (int i = 0; i < n; i++)
+            arr[i] = sc.nextInt();
+
+        System.out.println("Enter Tagrt:");
+        int target = sc.nextInt();
+
+        int z = twosum(arr, target, n);
+        if (z == -1) {
+            System.out.println("Key Not found!");
+        } else {
+            System.out.println("Key found at:" + z);
+        }
+
+        sc.close();
+    }
+}

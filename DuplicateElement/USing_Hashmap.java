@@ -1,4 +1,4 @@
-package Find_Duplicate_elements;
+package DuplicateElement;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
